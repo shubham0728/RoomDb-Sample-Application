@@ -5,6 +5,9 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
+import com.ss.roomdbsampleapp.dao.NotesDAO;
+import com.ss.roomdbsampleapp.model.NotesEntity;
+
 
 @android.arch.persistence.room.Database(entities = {NotesEntity.class}, version = 1, exportSchema = false)
 public abstract class Database extends RoomDatabase {

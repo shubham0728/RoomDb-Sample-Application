@@ -1,9 +1,12 @@
-package com.ss.roomdbsampleapp.db;
+package com.ss.roomdbsampleapp.repository;
 
-import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.content.Context;
 import android.os.AsyncTask;
+
+import com.ss.roomdbsampleapp.dao.NotesDAO;
+import com.ss.roomdbsampleapp.db.Database;
+import com.ss.roomdbsampleapp.model.NotesEntity;
 
 import java.util.List;
 
@@ -21,6 +24,12 @@ public class NotesRepository {
 		allNotes = notesDAO.getAllNotes();
 	}
 
+	/**
+	 * Returns list of all notes added.
+	 * LiveData helps in notifying active observers about updates.
+	 *
+	 * @return
+	 */
 	public LiveData<List<NotesEntity>> getAllNotes() {
 		return allNotes;
 	}
@@ -32,6 +41,11 @@ public class NotesRepository {
 		}
 	}
 
+	/**
+	 * Insert new notes using Async Task.
+	 *
+	 * @param notesEntity
+	 */
 	public void insert(NotesEntity notesEntity) {
 		new InsertCustAsyncTask(notesDAO).execute(notesEntity);
 	}

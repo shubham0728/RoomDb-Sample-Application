@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.ss.roomdbsampleapp.R;
-import com.ss.roomdbsampleapp.db.NotesEntity;
+import com.ss.roomdbsampleapp.model.NotesEntity;
 
 import java.util.List;
 

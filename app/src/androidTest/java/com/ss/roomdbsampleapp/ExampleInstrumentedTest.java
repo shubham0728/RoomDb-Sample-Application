@@ -1,13 +1,11 @@
 package com.ss.roomdbsampleapp;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.ss.roomdbsampleapp.db.NotesEntity;
-import com.ss.roomdbsampleapp.db.NotesRepository;
-import com.ss.roomdbsampleapp.db.NotesViewModel;
+import com.ss.roomdbsampleapp.model.NotesEntity;
+import com.ss.roomdbsampleapp.repository.NotesRepository;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

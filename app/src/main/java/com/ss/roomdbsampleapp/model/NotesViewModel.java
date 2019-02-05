@@ -1,10 +1,11 @@
-package com.ss.roomdbsampleapp.db;
+package com.ss.roomdbsampleapp.model;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
 import android.support.annotation.NonNull;
+
+import com.ss.roomdbsampleapp.repository.NotesRepository;
 
 import java.util.List;
 
@@ -20,6 +21,12 @@ public class NotesViewModel extends AndroidViewModel {
 		allNotes = notesRepository.getAllNotes();
 	}
 
+	/**
+	 * Returns list of all notes added.
+	 * LiveData helps in notifying active observers about updates.
+	 *
+	 * @return allNotes
+	 */
 	public LiveData<List<NotesEntity>> getAllNotes() {
 		return allNotes;
 	}

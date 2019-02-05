@@ -1,7 +1,6 @@
-package com.ss.roomdbsampleapp.Activities;
+package com.ss.roomdbsampleapp.activities;
 
 import android.arch.lifecycle.ViewModelProviders;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -11,8 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ss.roomdbsampleapp.R;
-import com.ss.roomdbsampleapp.db.NotesEntity;
-import com.ss.roomdbsampleapp.db.NotesViewModel;
+import com.ss.roomdbsampleapp.model.NotesEntity;
+import com.ss.roomdbsampleapp.model.NotesViewModel;
 
 /**
  * Data insertion activity
@@ -71,11 +70,11 @@ public class AddNotesActivity extends AppCompatActivity {
 		String email = mET_Email.getText().toString().trim();
 
 		if (name.length() == 0)
-			mET_Name.setError("Invalid Name.");
+			mET_Name.setError("Name cannot be empty.");
 		else if (number.length() == 0)
-			mET_Number.setError("Invalid Number.");
+			mET_Number.setError("Number cannot be empty.");
 		else if (email.length() == 0)
-			mET_Email.setError("Invalid Email");
+			mET_Email.setError("Email canot be empty.");
 		else {
 			NotesEntity notes = new NotesEntity();
 			notes.setName(name);

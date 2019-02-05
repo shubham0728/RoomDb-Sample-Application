@@ -1,4 +1,4 @@
-package com.ss.roomdbsampleapp.db;
+package com.ss.roomdbsampleapp.model;
 
 
 import android.arch.persistence.room.ColumnInfo;

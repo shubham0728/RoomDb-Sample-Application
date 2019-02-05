@@ -1,4 +1,4 @@
-package com.ss.roomdbsampleapp.Activities;
+package com.ss.roomdbsampleapp.activities;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -14,8 +14,8 @@ import android.view.View;
 
 import com.ss.roomdbsampleapp.R;
 import com.ss.roomdbsampleapp.adapter.NotesAdapter;
-import com.ss.roomdbsampleapp.db.NotesEntity;
-import com.ss.roomdbsampleapp.db.NotesViewModel;
+import com.ss.roomdbsampleapp.model.NotesEntity;
+import com.ss.roomdbsampleapp.model.NotesViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
